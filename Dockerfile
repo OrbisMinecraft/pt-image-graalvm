@@ -1,7 +1,7 @@
-FROM ghcr.io/graalvm/jdk:java17
+FROM ghcr.io/graalvm/jdk:ol9-java17
 LABEL author="Luis Michaelis"
 
-RUN microdnf install iproute
+RUN microdnf install -y iproute
 RUN useradd -m -d /home/container container
 RUN java -version
 
